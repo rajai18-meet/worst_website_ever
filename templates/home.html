@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Pick-GO!
+	</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+ {% if username %}
+
+<nav>
+    <div class="topnav">
+		  <a class="active" href="/">Home</a>
+		  <a href="/worldmap">Worldmap</a>
+		  <a href="/about">About</a>
+		  <a href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+		  <a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span class = "glyphicon glyphicon-user" ></span> Sign Up</a>
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+
+</head>
+<body>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/login" method='POST'>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div class="login-container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+    </div>
+  </form>
+
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div class="container">
+	<div class="jumbotron">
+
+	<table>
+		<tr>
+			<td>Welcome to Pick-GO!</td>
+		
+			<td>Adventure of a lifetime!</td>
+		</tr>
+	</table>
+
+
+
+
+
+
+
+	</div>
+</div>
+<h1> Welcome {{username}} </h1>
+
+<h3>Welcome to the best travel advice found within the internet</h3>
+<h4>Here, we help you feel at home in any country which you would like to go to, we specialise in making you feel at home wherever you go. Visit our <a href="/about">About Page</a> to get a taste of what we do and who we are!</h4>
+<h3>Find the best prices & deals in the <i>whole</i> internet, and we mean it!</h3>
+<h4>WE at Pick-Go! specialise in finding the best and most interesting packages available for our customers throughout the entire internet. You can find all available packages & deals in the <a href="/best_deals">Best Deals</a> section of our website!</h4>
+</body>
+</html>
+
+
+
+{% else %}
+
+<nav>
+    <div class="topnav">
+		  <a class="active" href="/">Home</a>
+		  <a href="/worldmap">Worldmap</a>
+		  <a href="/about">About</a>
+		  <a href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+		  <a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span class = "glyphicon glyphicon-user" ></span> Sign Up</a>
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+
+</head>
+<body>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/login" method='POST'>
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div class="login-container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+    </div>
+  </form>
+
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+<div class="container">
+	<div class="jumbotron">
+
+	<table>
+		<tr>
+			<td>Welcome to Pick-GO!</td>
+		
+			<td>Adventure of a lifetime!</td>
+		</tr>
+	</table>
+
+
+
+
+
+
+
+	</div>
+</div>
+<h1> USER IS NOT LOGGED IN </h1>
+
+<h3>Welcome to the best travel advice found within the internet</h3>
+<h4>Here, we help you feel at home in any country which you would like to go to, we specialise in making you feel at home wherever you go. Visit our <a href="/about">About Page</a> to get a taste of what we do and who we are!</h4>
+<h3>Find the best prices & deals in the <i>whole</i> internet, and we mean it!</h3>
+<h4>WE at Pick-Go! specialise in finding the best and most interesting packages available for our customers throughout the entire internet. You can find all available packages & deals in the <a href="/best_deals">Best Deals</a> section of our website!</h4>
+
+{% endif %}

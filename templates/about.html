@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+<html>
+<head>
+	<title>Pick-GO! - About</title>
+
+	<!-- Latest compiled and minified CSS -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ 	<!-- jQuery library -->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 	<!-- Latest compiled JavaScript -->
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<nav>
+    <div class="topnav">
+		  <a href="/">Home</a>
+		  <a href="/worldmap">Worldmap</a>
+		  <a class="active" href="/about">About</a>
+		  <a href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+		  <a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span class = "glyphicon glyphicon-user" ></span> Sign Up</a>
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+</head>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div class="login-container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <button type="submit">Signup!</button>
+    </div>
+  </form>
+</div>
+
+	<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<div class="container">
+	<div class="jumbotron">
+
+	<table>
+		<tr>
+			<td>Welcome to Pick-GO!</td>
+		
+			<td>Adventure of a lifetime!</td>
+		</tr>
+	</table>
+
+
+
+
+
+
+
+
+	</div>
+</div>
+<div class="alert alert-success fade in">	
+	WE found the best deals for you just now! <button type="button" class="btn btn-success beautiful-button"> Click Here!
+	</button>
+</div>
+<body>
+This <abbr title='Middle East Entrepreneurs of Tomorrow'>MEET</abbr> project is aimed to give the users the best experience and deals that can be found on the internet
+</body>
+</html>

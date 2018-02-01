@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Pick-GO! - Best_Deals!</title>
+
+	<!-- Latest compiled and minified CSS -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ 	<!-- jQuery library -->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 	<!-- Latest compiled JavaScript -->
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+ 
+<nav>
+    <div class="topnav">
+		  <a href="/">Home</a>
+		  <a href="/worldmap">Worldmap</a>
+		  <a href="/about">About</a>
+		  <a class="active" href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+      <a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span class = "glyphicon glyphicon-user" ></span> Sign Up</a>s
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+</head>
+<body>
+<div class="columns">
+  <ul class="price">
+    <li class='header'>BEST OFFER</li>
+    <li class="grey">Malta -  $249per person</li>
+    <li>Full Hotel accomodation</li>
+    <li>trip back for FREE</li>
+    <li>free lunch for a day!</li>
+    <li>3 day stay!</li>
+    <li class="grey"><a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"></span> Sign Up</a>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class='header'>GOOD OFFER</li>
+    <li class="grey">Maldives -  $1200per person</li>
+    <li>Full Hotel accomodation</li>
+    <li>Luxury at it's finest</li>
+    <li>free access to turquoise beach</li>
+    <li>3 day stay!</li>
+    <li class="grey"><a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span></span> Sign Up</a>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class='header'>SPECIAL OFFER</li>
+    <li class="grey">HIKING IN FRENCH ALPS -  $600per person</li>
+    <li>Full Hotel accomodation in mountains!</li>
+    <li>top-notch treatment</li>
+    <li>free access to private ski-ranch</li>
+    <li>3 day stay!</li>
+    <li class="grey"><a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span></span> Sign Up</a>
+  </ul>
+</div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div class="login-container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      <br>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <br>
+        
+      <button type="submit">Login</button>
+      <br>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>

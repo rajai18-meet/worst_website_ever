@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Pick-GO!
+	</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+
+
+<nav>
+    <div class="topnav">
+		  <a class="active" href="/">Home</a>
+		  <a href="/worldmap">Worldmap</a>
+		  <a href="/about">About</a>
+		  <a href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+
+</head>
+<body>
+	<form method='post'>
+<br>
+<label id="label">name</label>
+<br>
+<input type="name" name="name" placeholder="write your full name">
+<br>
+<label id="label" >password</label>
+<br>
+<input type="password" name="password" placeholder="write a password">
+<br>
+
+<br>
+<input type="submit" name="signup" value="Submit">
+</form>
+</body>
+<body>

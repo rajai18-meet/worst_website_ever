@@ -1,0 +1,84 @@
+<!DOCTYPE html>	
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+<html>
+<head>
+	<title>
+		Pick-GO! - WorldMap
+	</title>
+
+	<!-- Latest compiled and minified CSS -->
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ 	<!-- jQuery library -->
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 	<!-- Latest compiled JavaScript -->
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<nav>
+    <div class="topnav">
+		  <a href="/">Home</a>
+		  <a class='active' href="/worldmap">Worldmap</a>
+		  <a href="/about">About</a>
+		  <a href="/best_deals">Best Deals!</a>
+		  <span class="new badge blue">3</span>
+		  <a class ="btn btn-lg btn-primary" href="{{url_for('signup')}}"><span class = "glyphicon glyphicon-user" ></span> Sign Up</a>
+		  <button id="login-button" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+		</div>
+  </nav>
+ <h1 class="next_location_heading">Pick your next location!</h1>
+<div class='googlemap'>
+<iframe
+  width="900"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBQ6lyfXfIfMKdHLmxcR11JpjGbgk23pVo
+    &center=31.7683, 35.2137&zoom=5	" allowfullscreen>
+</iframe>
+</div>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div class="login-container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
